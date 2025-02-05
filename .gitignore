@@ -1,0 +1,45 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+
+# Django-related
+db.sqlite3
+*.sqlite3
+/media/
+*.log
+*.pot
+*.pyc
+
+# Django migrations
+**/migrations/*
+!**/migrations/__init__.py
+
+# VS Code
+.vscode/
+
+# Node.js dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Static files
+staticfiles/
+static/
+
+# Tailwind CSS output
+static/css/output.css
+
+# Secrets
+.env
+*.key
+
+# Compiled files
+*.mo
+
+# Docker
+*.dockerignore
