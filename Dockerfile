@@ -14,4 +14,4 @@ RUN pip install -r requirements.txt
 EXPOSE 8000
 
 # Start Django app
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "myapp.wsgi:application"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "frobarnapp.wsgi:application"]
