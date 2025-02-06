@@ -63,6 +63,7 @@ jobs:
 
       - name: Set Up Kubeconfig
         run: |
+          echo "${{ secrets.KUBECONFIG_BASE64 }}"
           echo "${{ secrets.KUBECONFIG_BASE64 }}" | base64 --decode > $HOME/.kube/config
           chmod 600 $HOME/.kube/config
           export KUBECONFIG=$HOME/.kube/config
