@@ -63,8 +63,9 @@ jobs:
 
       - name: Set Up Kubeconfig
         run: |
-          echo "${{ secrets.KUBECONFIG }}" > kubeconfig.yaml
-          export KUBECONFIG=$(pwd)/kubeconfig.yaml
+          echo "${{ secrets.KUBECONFIG_BASE64 }}" | base64 --decode > $HOME/.kube/config
+          chmod 600 $HOME/.kube/config
+          export KUBECONFIG=$HOME/.kube/config
           kubectl config view
 
       - name: Verify Kubernetes Cluster Connection
@@ -75,4 +76,4 @@ jobs:
         run: |
           kubectl apply -f k8/deployment.yaml
           kubectl apply -f k8/service.yaml
-          kubectl rollout status deployment django-app
+          kubectl rollout status deployment webapp
