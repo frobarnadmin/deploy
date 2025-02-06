@@ -64,7 +64,12 @@ jobs:
       - name: Set Up Kubeconfig
         run: |
           echo "${{ secrets.KUBECONFIG }}" > kubeconfig.yaml
-          export KUBECONFIG=kubeconfig.yaml
+          export KUBECONFIG=$(pwd)/kubeconfig.yaml
+          kubectl config view
+
+      - name: Verify Kubernetes Cluster Connection
+        run: |
+          kubectl get nodes
 
       - name: Deploy to Kubernetes
         run: |
