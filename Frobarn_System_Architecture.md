@@ -24,7 +24,7 @@ The application consists of **three main interfaces**:
 - Shows the **measurement data** for each request.
 - Allows tailors to **update order status** as they work on it.
 
-### **3️⃣ Frobarn Admin Interface**
+### **3️⃣ Frobarn Admin Interface** (Covered by Django Admin
 - Manages **users, tailors, and order tracking**.
 - Resolves disputes between **users and tailors**.
 - Manages the **shipping process** of completed orders back to the USA.
