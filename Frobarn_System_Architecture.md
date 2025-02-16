@@ -2,7 +2,9 @@
 
 ## **1. Overview**
 
-Frobarn is a technology company that connects users in the **USA** with tailors in **Africa** for custom clothing. The system integrates **AI-driven body measurement**, **order management**, and **logistics handling**, similar to how Uber connects riders with drivers.
+Frobarn is on a mission to solve the tailoring challenges faced by Africans in the diaspora using **Technology and AI**. Our platform seamlessly connects users in the **USA** with skilled tailors in **Africa** for custom clothing. 
+
+By integrating **AI-driven body measurement**, **efficient order management**, and **streamlined logistics**, Frobarn ensures a hassle-free experience, bridging the gap between customers and tailors.
 
 ---
 
@@ -133,5 +135,3 @@ The architecture follows a **three-tier design**:
 ## **8. Summary**
 
 This document outlines the **architecture and workflow** of the Frobarn tailoring platform, which connects **users in the USA with tailors in Africa**. The platform integrates **AI-powered body measurement**, **order management**, and **logistics tracking**, ensuring a seamless experience for both users and tailors.
-
-
