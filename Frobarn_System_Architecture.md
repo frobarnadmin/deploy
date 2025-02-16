@@ -71,22 +71,22 @@ The architecture follows a **three-tier design**:
        |                                                        |
        |                                                        |
        V                                                        |
-+----------------+                                             |
-|  Abody AI App | <---- (Redirect & Receive) -----------------|
-| (3rd Party)   |                                             |
-+----------------+                                             |
-                                                              |
-       +------------------------------------------------------+
++----------------+                                              |
+|  Abody AI App  | <---- (Redirect & Receive) ------------------|
+| (3rd Party)    |                                              |
++----------------+                                              |
+                                                                |
+       +--------------------------------------------------------+
        |
        V
 +--------------------------+      +-------------------------+
-|  Tailor Web Interface    | ---> |   Django Backend API   |
-|  (React.js/Next.js)      |      |  (Processes Orders)    |
+|  Tailor Web Interface    | ---> |   Django Backend API    |
+|  (React.js/Next.js)      |      |  (Processes Orders)     |
 +--------------------------+      +-------------------------+
 
 +--------------------------+      +-------------------------+
-|  Frobarn Admin Interface | ---> |   Django Backend API   |
-|  (React.js/Next.js)      |      |  (Admin Operations)    |
+|  Frobarn Admin Interface | ---> |   Django Backend API    |
+|  (React.js/Next.js)      |      |  (Admin Operations)     |
 +--------------------------+      +-------------------------+
 ```
 
