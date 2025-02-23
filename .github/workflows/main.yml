@@ -42,11 +42,11 @@ jobs:
 
       - name: Build Docker Image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/myapp:latest .
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/frobarn:1.0 .
 
       - name: Push Docker Image to Docker Hub
         run: |
-          docker push ${{ secrets.DOCKER_USERNAME }}/myapp:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/frobarn:1.0
 
   # deploy:
   #   needs: docker

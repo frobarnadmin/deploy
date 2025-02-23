@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prod-frobarn
+  namespace: prod
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: prod-frobarn
+  template:
+    metadata:
+      labels:
+        app: prod-frobarn
+    spec:
+      containers:
+      - name: prod-frobarn
+        image: frobarn/webapp:latest
+        ports:
+        - containerPort: 8000
