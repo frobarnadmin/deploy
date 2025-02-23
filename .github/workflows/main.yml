@@ -48,33 +48,33 @@ jobs:
         run: |
           docker push ${{ secrets.DOCKER_USERNAME }}/myapp:latest
 
-  deploy:
-    needs: docker
-    runs-on: ubuntu-latest
+  # deploy:
+  #   needs: docker
+  #   runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v2
+  #   steps:
+  #     - name: Checkout Code
+  #       uses: actions/checkout@v2
 
-      - name: Install Kubectl
-        uses: azure/setup-kubectl@v3
-        with:
-          version: 'latest'
+  #     - name: Install Kubectl
+  #       uses: azure/setup-kubectl@v3
+  #       with:
+  #         version: 'latest'
 
-      - name: Set Up Kubeconfig
-        run: |
-          echo "config---> ${{ secrets.KUBECONFIG_BASE64 }}"
-          echo "${{ secrets.KUBECONFIG_BASE64 }}" | base64 --decode > $HOME/.kube/config
-          chmod 600 $HOME/.kube/config
-          export KUBECONFIG=$HOME/.kube/config
-          kubectl config view
+  #     - name: Set Up Kubeconfig
+  #       run: |
+  #         echo "config---> ${{ secrets.KUBECONFIG_BASE64 }}"
+  #         echo "${{ secrets.KUBECONFIG_BASE64 }}" | base64 --decode > $HOME/.kube/config
+  #         chmod 600 $HOME/.kube/config
+  #         export KUBECONFIG=$HOME/.kube/config
+  #         kubectl config view
 
-      - name: Verify Kubernetes Cluster Connection
-        run: |
-          kubectl get nodes
+  #     - name: Verify Kubernetes Cluster Connection
+  #       run: |
+  #         kubectl get nodes
 
-      - name: Deploy to Kubernetes
-        run: |
-          kubectl apply -f k8/deployment.yaml
-          kubectl apply -f k8/service.yaml
-          kubectl rollout status deployment webapp
+  #     - name: Deploy to Kubernetes
+  #       run: |
+  #         kubectl apply -f k8/deployment.yaml
+  #         kubectl apply -f k8/service.yaml
+  #         kubectl rollout status deployment webapp

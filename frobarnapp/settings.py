@@ -122,4 +122,4 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-ALLOWED_HOSTS = ['kacytunde.com', 'www.kacytunde.com', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['frobarn.com', 'www.frobarn.com', 'dev.frobarn.com', 'test.frobarn.com', '127.0.0.1', 'localhost']
